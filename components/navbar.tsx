@@ -16,41 +16,49 @@ export default function Navbar(props: NavbarProps) {
 
   /* Renderización */
   return (
-    <React.Fragment>
-      {/* Barra de navegación */}
-      <nav className="bg-indigo-800 w-full sticky top-0 z-50">
+    <nav
+      className={`w-full px-3 sticky top-0 z-50 transition-colors duration-500 ${
+        show ? "bg-my-blue-dark" : "bg-my-white bg-opacity-70"
+      }`}
+    >
+      <div
+        className={`container mx-auto flex flex-col overflow-hidden transition-height duration-500 ${
+          show ? "h-screen" : "h-20"
+        }`}
+      >
+        <div className="h-20 flex-none flex flex-row justify-between items-center">
+          {/* Logo */}
+          <div>
+            <a
+              href="#"
+              className={`font-display text-2xl font-bold bg-transparent hover:bg-transparent no-underline transition-colors ${
+                show
+                  ? "text-white"
+                  : "text-my-blue-dark hover:text-my-blue-dark"
+              }`}
+            >
+              SICADCAM
+            </a>
+          </div>
+          {/* Botón de menú desplegable */}
+          <button
+            className={`text-xl transition-tranform duration-500 ${
+              show ? "-rotate-180 text-white" : "rotate-0 text-my-blue dark"
+            }`}
+            onClick={() => setShow(!show)}
+          >
+            <Icon icon="chevron-down" />
+          </button>
+        </div>
+        {/* Enlaces */}
         <div
-          className={`container mx-auto flex flex-col overflow-hidden transition-height duration-500 ${
-            show ? "h-screen" : "h-20"
+          className={`overflow-hidden transition-opacity lg:transition-none duration-500 ${
+            show ? "opacity-100" : "opacity-0 lg:opacity-100"
           }`}
         >
-          <div className="h-20 px-8 flex-none flex flex-row justify-between items-center">
-            {/* Logo */}
-            <div>
-              <a href="#" className="text-white">
-                Sicadcam
-              </a>
-            </div>
-            {/* Botón de menú desplegable */}
-            <button
-              className={`text-white transition-tranform lg:transition-none duration-500 ${
-                show ? "-rotate-180" : "rotate-0"
-              }`}
-              onClick={() => setShow(!show)}
-            >
-              <Icon icon="chevron-down" />
-            </button>
-          </div>
-          {/* Enlaces */}
-          <div
-            className={`px-8 overflow-hidden transition-opacity lg:transition-none duration-500 ${
-              show ? "opacity-100" : "opacity-0 lg:opacity-100"
-            }`}
-          >
-            <ul>{children}</ul>
-          </div>
+          <ul>{children}</ul>
         </div>
-      </nav>
-    </React.Fragment>
+      </div>
+    </nav>
   );
 }

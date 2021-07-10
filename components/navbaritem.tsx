@@ -15,12 +15,18 @@ export default function NavbarItem(props: NavbarItemProps) {
 
   /* Renderización */
   return (
-    <li
-      className={`py-3 block text-white hover:text-opacity-100 ${
-        activePage === href ? "font-bold text-opacity-100" : "text-opacity-70"
-      }`}
-    >
-      <Link href={href || "#"}>{children}</Link>
+    <li className="py-3">
+      <Link href={href || "#"}>
+        <a
+          className={`py-3 bg-transparent no-underline hover:bg-transparent text-white hover:text-opacity-100 ${
+            activePage === href
+              ? "font-bold text-opacity-100"
+              : "text-opacity-70"
+          }`}
+        >
+          {children}
+        </a>
+      </Link>
     </li>
   );
 }
