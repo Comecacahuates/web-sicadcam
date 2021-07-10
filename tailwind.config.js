@@ -4,10 +4,17 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ["Fira Sans", "sans-serif"],
-      display: ["Noto Serif JP", "serif"],
+      sans: ["Open Sans", "sans-serif"],
+      display: ["Lato", "serif"],
     },
     extend: {
+      colors: {
+        "my-blue": "#034C8C",
+        "my-blue-dark": "#012240",
+        "my-yellow": "#F2A71D",
+        "my-gray": "#403E3E",
+        "my-white": "#F2F2F0",
+      },
       transitionProperty: {
         height: "height",
       },
@@ -34,6 +41,9 @@ module.exports = {
         "80vh": "80vh",
         "90vh": "90vh",
         "100vh": "100vh",
+      },
+      zIndex: {
+        "-1": "-1",
       },
     },
   },
