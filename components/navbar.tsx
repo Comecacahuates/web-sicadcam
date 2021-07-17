@@ -18,15 +18,15 @@ export default function Navbar(props: NavbarProps) {
   return (
     <nav
       className={`w-full px-3 sticky top-0 z-50 transition-colors duration-500 ${
-        show ? "bg-my-blue-dark" : "bg-my-white bg-opacity-70"
+        show ? "bg-my-blue-dark" : "bg-my-white"
       }`}
     >
       <div
         className={`container mx-auto flex flex-col overflow-hidden transition-height duration-500 ${
-          show ? "h-screen" : "h-20"
+          show ? "h-screen" : "h-16"
         }`}
       >
-        <div className="h-20 flex-none flex flex-row justify-between items-center">
+        <div className="h-16 flex-none flex flex-row justify-between items-center">
           {/* Logo */}
           <div>
             <a

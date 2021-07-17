@@ -18,10 +18,10 @@ export default function NavbarItem(props: NavbarItemProps) {
     <li className="py-3">
       <Link href={href || "#"}>
         <a
-          className={`py-3 bg-transparent no-underline hover:bg-transparent text-white hover:text-opacity-100 ${
+          className={`py-3 text-white no-underline ${
             activePage === href
               ? "font-bold text-opacity-100"
-              : "text-opacity-70"
+              : "text-opacity-70 hover:text-opacity-100"
           }`}
         >
           {children}
