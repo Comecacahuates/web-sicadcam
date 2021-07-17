@@ -14,9 +14,10 @@ export default function Home() {
       author="Adrián Juárez Monroy"
       description="Las mejor fabricación digital"
     >
-      {/* Título */}
-      <section className="h-screen flex flex-col lg:flex-row">
-        <div className="flex-none lg:flex-1 lg:flex items-center mx-auto px-3 lg:px-8">
+      {/* Hero */}
+      <section className="h-screen flex flex-col lg:grid lg:grid-cols-2">
+        {/* Título */}
+        <div className="flex-none lg:flex items-center mx-auto px-3 lg:px-8">
           <div className="py-12 text-center lg:text-right">
             <h1 className="text-my-blue-dark">
               Las mejores herramientas para fabricación digital
@@ -24,6 +25,7 @@ export default function Home() {
             <p className="h4 text-gray-500">Diseño 3D & Fabricación</p>
           </div>
         </div>
+        {/* Imagen */}
         <div className="flex-1 relative">
           <Image
             src="https://placeimg.com/640/480/nature"
@@ -34,38 +36,83 @@ export default function Home() {
         </div>
       </section>
       {/* Diseño 3D */}
-      <section className="bg-my-blue text-white flex flex-col">
-        <SectionTitle textColor="white">Diseño 3D</SectionTitle>
+      <section className="my-36 md:h-screen md:grid md:grid-cols-2 xl:container xl:mx-auto">
+        <div className="h-40 md:h-auto md:flex md:items-center md:justify-center">
+          <h2 className="text-center">Diseño 3D</h2>
+        </div>
         {/* Rhinoceros */}
-        <SectionImg src="https://placeimg.com/640/480/nature" alt="Alt">
-          <h3>Rhinoceros</h3>
-          <p className="lead">
-            La navaja suiza del diseño 3D. Crea, edita, analiza y anima modelos
-            fácil.
-          </p>
-          <p>
-            <Link href="#">
-              <a>
-                Más información <Icon icon="arrow-right" />
-              </a>
-            </Link>
-          </p>
-        </SectionImg>
+        <div className="h-96 md:h-auto relative md:order-first">
+          <div className="absolute inset-0 z-10 px-3 md:px-10 py-12 flex items-center justify-center xl:px-10">
+            <div className="text-center">
+              <h3>
+                <Link href="#">
+                  <a className="text-white">Rhinoceros</a>
+                </Link>
+              </h3>
+              <p className="lead text-white">
+                Crea, edita, analiza y anima modelos 3D fácilmente.
+              </p>
+            </div>
+          </div>
+          <div className="absolute inset-0 filter brightness-40">
+            <Image
+              src="https://placeimg.com/640/480/nature"
+              alt="Rhinoceros: software de diseño 3D"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center center"
+            />
+          </div>
+        </div>
         {/* Grasshopper */}
-        <SectionImg src="https://placeimg.com/640/480/nature" alt="Alt">
-          <h3>Grasshopper</h3>
-          <p className="lead">
-            Un editor gráfico de algoritmos con el que podrás generar geometría
-            compleja con muy poco esfuerzo.
-          </p>
-        </SectionImg>
-        {/*     Digitalizadores MicroScribe */}
-        <SectionImg src="https://placeimg.com/640/480/nature" alt="Alt">
-          <h3>Digitalizadores MicroScribe</h3>
-          <p className="lead">
-            Utiliza modelos reales como referencia para recrearlos digitalmente.
-          </p>
-        </SectionImg>
+        <div className="h-96 md:h-auto relative">
+          <div className="absolute inset-0 z-10 px-3 md:px-10 py-12 flex items-center justify-center xl:px-10">
+            <div className="text-center">
+              <h3>
+                <Link href="#">
+                  <a className="text-white">Grasshopper</a>
+                </Link>
+              </h3>
+              <p className="lead text-white">
+                Un editor gráfico de algoritmos para diseño paramétrico.
+              </p>
+            </div>
+          </div>
+          <div className="absolute inset-0 filter brightness-40">
+            <Image
+              src="https://placeimg.com/640/480/nature"
+              alt="Grasshopper: software para diseño 3D paramétrico"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center center"
+            />
+          </div>
+        </div>
+        {/* Digitalizadores MicroScribe */}
+        <div className="h-96 md:h-auto relative">
+          <div className="absolute inset-0 z-10 px-3 md:px-10 py-12 flex items-center justify-center xl:px-10">
+            <div className="text-center">
+              <h3>
+                <Link href="#">
+                  <a className="text-white">Digitalizadores MicroScribe</a>
+                </Link>
+              </h3>
+              <p className="lead text-white">
+                Utiliza modelos reales como referencia para recrearlos
+                digitalmente.
+              </p>
+            </div>
+          </div>
+          <div className="absolute inset-0 filter brightness-40">
+            <Image
+              src="https://placeimg.com/640/480/nature"
+              alt="Brazo digitalizador 3D"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center center"
+            />
+          </div>
+        </div>
       </section>
       {/* Fabricación */}
       <section className="flex flex-col">
