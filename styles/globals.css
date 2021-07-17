@@ -33,7 +33,7 @@
     @apply text-4xl md:text-5xl lg:text-5xl font-extrabold font-display leading-tight my-4;
   }
   h3 {
-    @apply text-3xl font-bold font-display leading-tight my-4;
+    @apply text-3xl md:text-4xl font-bold font-display leading-tight my-4;
   }
   h4 {
     @apply text-2xl font-bold font-display leading-tight my-4;
@@ -51,16 +51,16 @@
     @apply text-4xl md:text-5xl lg:text-6xl font-extrabold font-display leading-none my-6;
   }
   .h2 {
-    @apply text-4xl font-extrabold font-display leading-tight my-4;
+    @apply text-4xl md:text-5xl lg:text-5xl font-extrabold font-display leading-tight my-4;
   }
   .h3 {
-    @apply text-3xl font-bold font-display leading-tight my-4;
+    @apply text-3xl md:text-4xl font-bold font-display leading-tight my-4;
   }
   .h4 {
     @apply text-2xl font-bold font-display leading-tight my-4;
   }
   .lead {
-    @apply text-xl font-display leading-normal;
+    @apply text-xl font-sans leading-normal;
   }
   .diagonal-top-right {
     @apply relative
