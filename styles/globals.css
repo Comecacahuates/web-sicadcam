@@ -18,11 +18,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 
 @layer base {
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl font-extrabold font-display leading-none my-6;
   }
   h2 {
-    @apply text-4xl font-black font-display leading-tight my-4;
+    @apply text-4xl md:text-5xl lg:text-5xl font-extrabold font-display leading-tight my-4;
   }
   h3 {
     @apply text-3xl font-bold font-display leading-tight my-4;
@@ -34,16 +42,16 @@
     @apply text-base font-sans leading-normal my-4;
   }
   a {
-    @apply text-my-blue-dark underline hover:no-underline;
+    @apply text-my-blue-dark underline visited:underline focus:outline-white hover:no-underline active:no-underline;
   }
 }
 
 @layer components {
   .h1 {
-    @apply text-4xl text-my-blue-dark font-black font-display leading-tight my-4;
+    @apply text-4xl md:text-5xl lg:text-6xl font-extrabold font-display leading-none my-6;
   }
   .h2 {
-    @apply text-4xl font-black font-display leading-tight my-4;
+    @apply text-4xl font-extrabold font-display leading-tight my-4;
   }
   .h3 {
     @apply text-3xl font-bold font-display leading-tight my-4;
@@ -52,7 +60,7 @@
     @apply text-2xl font-bold font-display leading-tight my-4;
   }
   .lead {
-    @apply text-xl font-display leading-normal font-bold;
+    @apply text-xl font-display leading-normal;
   }
   .diagonal-top-right {
     @apply relative
