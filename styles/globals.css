@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fira Code */
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+/* Metropolis */
+@import url("./fonts/font-metropolis.css");
 /* Fira Sans */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* Fira Sans Extra Condensed */
@@ -16,39 +16,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 /* Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
-/* Lato */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 @layer base {
   h1 {
-    @apply text-4xl font-black font-display leading-none my-6;
+    @apply text-4xl md:text-5xl lg:text-6xl font-extrabold font-display leading-none my-6;
   }
   h2 {
-    @apply text-3xl font-black font-display leading-tight my-4;
+    @apply text-4xl font-black font-display leading-tight my-4;
   }
   h3 {
-    @apply text-xl font-bold font-display leading-tight my-4;
+    @apply text-3xl font-bold font-display leading-tight my-4;
+  }
+  h4 {
+    @apply text-2xl font-bold font-display leading-tight my-4;
   }
   p {
     @apply text-base font-sans leading-normal my-4;
   }
   a {
-    @apply text-my-blue-dark bg-my-gray bg-opacity-10 underline hover:text-white hover:bg-my-blue-dark hover:bg-opacity-100;
+    @apply text-my-blue-dark underline hover:no-underline;
   }
 }
 
 @layer components {
   .h1 {
-    @apply text-4xl font-bold font-display leading-tight my-4;
+    @apply text-4xl text-my-blue-dark font-black font-display leading-tight my-4;
   }
   .h2 {
-    @apply text-3xl font-black font-display leading-tight my-4;
+    @apply text-4xl font-black font-display leading-tight my-4;
   }
   .h3 {
-    @apply text-xl font-bold font-display leading-tight my-4;
+    @apply text-3xl font-bold font-display leading-tight my-4;
+  }
+  .h4 {
+    @apply text-2xl font-bold font-display leading-tight my-4;
   }
   .lead {
-    @apply text-xl font-sans leading-normal font-light;
+    @apply text-xl font-display leading-normal font-bold;
   }
   .diagonal-top-right {
     @apply relative
