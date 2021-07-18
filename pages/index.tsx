@@ -2,8 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/layout";
-import SectionTitle from "../components/sectiontitle";
-import SectionImg from "../components/sectionimg";
+import ImageCard from "../components/imagecard";
 import Icon from "../components/icon";
 
 export default function Home() {
@@ -41,78 +40,48 @@ export default function Home() {
           <h2 className="text-center">Diseño 3D</h2>
         </div>
         {/* Rhinoceros */}
-        <div className="h-96 md:h-auto relative md:order-first">
-          <div className="absolute inset-0 z-10 px-3 md:px-10 flex items-center justify-center">
-            <div className="text-center">
-              <h3>
-                <Link href="#">
-                  <a className="text-white">Rhinoceros</a>
-                </Link>
-              </h3>
-              <p className="lead text-white">
-                Crea, edita, analiza y anima modelos 3D fácilmente.
-              </p>
-            </div>
+        <ImageCard
+          className="h-96 md:h-auto md:order-first"
+          src="https://placeimg.com/640/480/nature"
+          alt="Rhinoceros: software de diseño 3D"
+          href="#"
+        >
+          <div className="text-center">
+            <h3 className="text-white">Rhinoceros</h3>
+            <p className="lead text-white">
+              Crea, edita, analiza y anima modelos 3D fácilmente.
+            </p>
           </div>
-          <div className="absolute inset-0 filter brightness-40">
-            <Image
-              src="https://placeimg.com/640/480/nature"
-              alt="Rhinoceros: software de diseño 3D"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center center"
-            />
-          </div>
-        </div>
+        </ImageCard>
         {/* Grasshopper */}
-        <div className="h-96 md:h-auto relative">
-          <div className="absolute inset-0 z-10 px-3 md:px-10 flex items-center justify-center xl:px-10">
-            <div className="text-center">
-              <h3>
-                <Link href="#">
-                  <a className="text-white">Grasshopper</a>
-                </Link>
-              </h3>
-              <p className="lead text-white">
-                Un editor gráfico de algoritmos para diseño paramétrico.
-              </p>
-            </div>
+        <ImageCard
+          className="h-96 md:h-auto"
+          src="https://placeimg.com/640/480/nature"
+          alt="Grasshopper: software para diseño 3D paramétrico"
+          href="#"
+        >
+          <div className="text-center">
+            <h3 className="text-white">Grasshopper</h3>
+            <p className="lead text-white">
+              Un editor gráfico de algoritmos para diseño paramétrico.
+            </p>
           </div>
-          <div className="absolute inset-0 filter brightness-40">
-            <Image
-              src="https://placeimg.com/640/480/nature"
-              alt="Grasshopper: software para diseño 3D paramétrico"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center center"
-            />
-          </div>
-        </div>
+        </ImageCard>
         {/* Digitalizadores MicroScribe */}
-        <div className="h-96 md:h-auto relative">
-          <div className="absolute inset-0 z-10 px-3 md:px-10 flex items-center justify-center xl:px-10">
-            <div className="text-center">
-              <h3>
-                <Link href="#">
-                  <a className="text-white">Digitalizadores MicroScribe</a>
-                </Link>
-              </h3>
-              <p className="lead text-white">
-                Utiliza modelos reales como referencia para recrearlos
-                digitalmente.
-              </p>
-            </div>
+        <ImageCard
+          className="h-96 md:h-auto"
+          src="https://placeimg.com/640/480/nature"
+          alt="Brazo digitalizador 3D"
+          href="#"
+        >
+          <div className="text-center">
+            <h3 className="text-white">Digitalizadores MicroScribe</h3>
+            <p className="lead text-white">
+              Utiliza modelos reales como referencia para recrearlos
+              digitalmente.
+            </p>
           </div>
-          <div className="absolute inset-0 filter brightness-40">
-            <Image
-              src="https://placeimg.com/640/480/nature"
-              alt="Brazo digitalizador 3D"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center center"
-            />
-          </div>
-        </div>
+        </ImageCard>
       </section>
       {/* Fabricación */}
       <section className="mb-36 md:h-screen md:grid md:grid-cols-2 md:auto-rows-fr xl:container xl:mx-auto">
@@ -120,82 +89,52 @@ export default function Home() {
           <h2 className="text-center">Fabricación</h2>
         </div>
         {/* RhinoCAM */}
-        <div className="h-96 md:h-auto relative">
-          <div className="absolute inset-0 z-10 px-3 md:px-10 flex items-center justify-center">
-            <div className="text-center">
-              <h3>
-                <Link href="#">
-                  <a className="text-white">RhinoCAM</a>
-                </Link>
-              </h3>
-              <p className="lead text-white">
-                Genera los códigos de maquinado CNC dentro de Rhinoceros para
-                fabricar tus modelos.
-              </p>
-            </div>
+        <ImageCard
+          className="h-96 md:h-auto"
+          src="https://placeimg.com/640/480/nature"
+          alt="RhinoCAM: software de maquinado CNC"
+          href="#"
+        >
+          <div className="text-center">
+            <h3 className="text-white">RhinoCAM</h3>
+            <p className="lead text-white">
+              Genera los códigos de maquinado CNC dentro de Rhinoceros para
+              fabricar tus modelos.
+            </p>
           </div>
-          <div className="absolute inset-0 filter brightness-40">
-            <Image
-              src="https://placeimg.com/640/480/nature"
-              alt="RhinoCAM: software de maquinado CNC"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center center"
-            />
-          </div>
-        </div>
+        </ImageCard>
         {/* Máquinas CNC */}
-        <div className="h-96 md:h-auto relative">
-          <div className="absolute inset-0 z-10 px-3 md:px-10 flex items-center justify-center">
-            <div className="text-center">
-              <h3>
-                <Link href="#">
-                  <a className="text-white">Máquinas CNC</a>
-                </Link>
-              </h3>
-              <p className="lead text-white">
-                Fabrica tus modelos en una gran cantidad de materiales.
-              </p>
-            </div>
+        <ImageCard
+          className="h-96 md:h-auto"
+          src="https://placeimg.com/640/480/nature"
+          alt="Máquina CNC"
+          href="#"
+        >
+          <div className="text-center">
+            <h3 className="text-white">Máquinas CNC</h3>
+            <p className="lead text-white">
+              Fabrica tus modelos en una gran cantidad de materiales.
+            </p>
           </div>
-          <div className="absolute inset-0 filter brightness-40">
-            <Image
-              src="https://placeimg.com/640/480/nature"
-              alt="Máquina CNC"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center center"
-            />
-          </div>
-        </div>
+        </ImageCard>
         {/* Impresoras 3D */}
-        <div className="h-96 md:h-auto relative">
-          <div className="absolute inset-0 z-10 px-3 md:px-10 flex items-center justify-center">
-            <div className="text-center">
-              <h3>
-                <Link href="#">
-                  <a className="text-white">Impresoras 3D</a>
-                </Link>
-              </h3>
-              <p className="lead text-white">
-                Obtén prototipos y piezas funcionales en cuestión de horas.
-              </p>
-            </div>
+        <ImageCard
+          className="h-96 md:h-auto"
+          src="https://placeimg.com/640/480/nature"
+          alt="Impresora 3D"
+          href="#"
+        >
+          <div className="text-center">
+            <h3 className="text-white">Impresoras 3D</h3>
+            <p className="lead text-white">
+              Obtén prototipos y piezas funcionales en cuestión de horas.
+            </p>
           </div>
-          <div className="absolute inset-0 filter brightness-40">
-            <Image
-              src="https://placeimg.com/640/480/nature"
-              alt="Impresora 3D"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center center"
-            />
-          </div>
-        </div>
+        </ImageCard>
       </section>
       {/* Educación */}
       <section className="flex flex-col bg-my-yellow">
-        <SectionTitle textColor="black">Educación</SectionTitle>
+        <h2>Educación</h2>
         <div className="container mx-auto px-3 py-10">
           <p className="lead">
             Aprende con nosotros a utilizar las tecnologías que ponemos a tu
