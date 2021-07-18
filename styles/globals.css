@@ -36,7 +36,7 @@
     @apply text-gray-800 text-3xl md:text-4xl font-bold font-display leading-tight my-4;
   }
   h4 {
-    @apply text-gray-800 text-2xl font-bold font-display leading-tight my-4;
+    @apply text-gray-800 text-2xl font-semibold font-display leading-tight my-4;
   }
   p {
     @apply text-base font-sans leading-normal my-4;
@@ -57,72 +57,12 @@
     @apply text-3xl md:text-4xl font-bold font-display leading-tight my-4;
   }
   .h4 {
-    @apply text-2xl font-bold font-display leading-tight my-4;
+    @apply text-gray-800 text-2xl font-semibold font-display leading-tight my-4;
   }
   .lead {
     @apply text-xl font-sans leading-normal;
   }
-  .diagonal-top-right {
-    @apply relative
-    before:h-20
-    before:w-full
-    before:top-0
-    before:left-0
-    before:block
-    before:bg-my-white
-    before:absolute
-    before:z-10
-    before:clip-triangle-top-right;
-  }
-  .diagonal-top-left {
-    @apply relative
-    after:h-20
-    after:w-full
-    after:top-0
-    after:left-0
-    after:block
-    after:bg-my-white
-    after:absolute
-    after:z-10
-    after:clip-triangle-top-left;
-  }
-  .diagonal-bottom-right {
-    @apply relative
-    after:h-20
-    after:w-full
-    after:bottom-0
-    after:left-0
-    after:block
-    after:bg-my-white
-    after:absolute
-    after:z-10
-    after:clip-triangle-bottom-right;
-  }
-  .diagonal-bottom-left {
-    @apply relative
-    after:h-20
-    after:w-full
-    after:bottom-0
-    after:left-0
-    after:block
-    after:bg-my-white
-    after:absolute
-    after:z-10
-    after:clip-triangle-bottom-left;
-  }
 }
 
 @layer utilities {
-  .clip-triangle-top-right {
-    clip-path: polygon(0 0, 100% 100%, 100% 0);
-  }
-  .clip-triangle-top-left {
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-  }
-  .clip-triangle-bottom-right {
-    clip-path: polygon(0 100%, 100% 0, 100% 100%);
-  }
-  .clip-triangle-bottom-left {
-    clip-path: polygon(0 0, 0 100%, 100% 100%);
-  }
 }

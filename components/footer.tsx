@@ -6,108 +6,96 @@ import Icon from "./icon";
 export default function Footer() {
   /* Renderización */
   return (
-    <footer className="px-3 py-10 bg-my-gray text-white">
-      <div className="container mx-auto">
-        <div className="flex flex-col">
-          {/* Diseño 3D */}
-          <div className="py-3">
-            <span className="h3 text-white">Diseño 3D</span>
-            <ul>
-              <li className="my-3">
+    <footer className="py-16 bg-my-gray">
+      <div className="container mx-auto px-3 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {/* Diseño 3D */}
+        <div className="mb-12">
+          <p className="h4 text-white">Diseño 3D</p>
+          <ul>
+            <li className="mb-3">
+              <Link href="#">
+                <a className="text-white">Rhinoceros</a>
+              </Link>
+            </li>
+            <li className="mb-3">
+              <Link href="#">
+                <a className="text-white">Grasshopper</a>
+              </Link>
+            </li>
+            <li className="mb-3">
+              <Link href="#">
+                <a className="text-white">Digitalizadores MicroScribe</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        {/* Fabricación */}
+        <div className="mb-12">
+          <p className="h4 text-white">Fabricación</p>
+          <ul>
+            <li className="mb-3">
+              <Link href="#">
+                <a className="text-white">RhinoCAM</a>
+              </Link>
+            </li>
+            <li className="mb-3">
+              <Link href="#">
+                <a className="text-white">Máquinas CNC</a>
+              </Link>
+            </li>
+            <li className="mb-3">
+              <Link href="#">
+                <a className="text-white">Impresoras 3D</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        {/* Educación */}
+        <div className="mb-12">
+          <p className="h4 text-white">Educación</p>
+          <ul>
+            <li className="mb-3">
+              <Link href="#">
+                <a className="text-white">Cursos de capacitación</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        {/* Contacto */}
+        <div className="mb-12">
+          <p className="h4 text-white">Servicios de Ingeniería CAD/CAM</p>
+          <address>
+            <ul className="text-white">
+              {/* Teléfono */}
+              <li className="mb-3">
+                <Icon icon="telephone-fill" />{" "}
                 <Link href="#">
-                  <a className="text-white">Rhinoceros</a>
+                  <a className="text-white">55 4655 4775</a>
                 </Link>
               </li>
-              <li className="my-3">
+              {/* Correo */}
+              <li className="mb-3">
+                <Icon icon="envelope-fill" />{" "}
                 <Link href="#">
-                  <a className="text-white">Grasshopper</a>
-                </Link>
-              </li>
-              <li className="my-3">
-                <Link href="#">
-                  <a className="text-white">Flamingo</a>
-                </Link>
-              </li>
-              <li className="my-3">
-                <Link href="#">
-                  <a className="text-white">Bongo</a>
+                  <a className="text-white">contacto@sicadcam.com</a>
                 </Link>
               </li>
             </ul>
-          </div>
-          <div className="flex flex-col">
-            {/* Fabricación */}
-            <div className="py-3">
-              <span className="h3 text-white">Fabricación</span>
-              <ul>
-                <li className="my-3">
-                  <Link href="#">
-                    <a className="text-white">RhinoCAM</a>
-                  </Link>
-                </li>
-                <li className="my-3">
-                  <Link href="#">
-                    <a className="text-white">Máquinas CNC</a>
-                  </Link>
-                </li>
-                <li className="my-3">
-                  <Link href="#">
-                    <a className="text-white">Impresoras 3D</a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            {/* Ingeniería inversa */}
-            <div className="py-3">
-              <span className="h3 text-white">Ingeniería inversa</span>
-              <ul>
-                <li className="py-3">
-                  <Link href="#">
-                    <a className="text-white">Digitalizadores MicroScribe</a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* Contacto */}
-          <div className="py-3">
-            <span className="h3 text-white">Contacto</span>
-            <address>
-              <ul>
-                {/* Teléfono */}
-                <li className="my-3">
-                  <Icon icon="telephone-fill" />
-                  {` `}
-                  <a className="text-white" href="#">
-                    55 4655 4775
-                  </a>
-                </li>
-                {/* Correo */}
-                <li className="my-3">
-                  <Icon icon="envelope-fill" />
-                  {` `}
-                  <a className="text-white" href="#">
-                    contacto@sicadcam.com
-                  </a>
-                </li>
-                {/* Telegram */}
-                <li className="my-3">
+            <div className="">
+              {/* Facebook */}
+              <Link href="#">
+                <a className="text-white mr-3">
+                  <Icon icon="facebook" />
+                </a>
+              </Link>
+              {/* Telegram */}
+              <Link href="#">
+                <a className="text-white mr-3">
                   <Icon icon="telegram" />
-                  {` `}
-                  <a className="text-white" href="#">
-                    /sicadcam
-                  </a>
-                </li>
-                {/* Facebook */}
-                <li className="my-3">
-                  <Icon icon="facebook" /> {` `}
-                  <a className="text-white" href="#">
-                    /sicadcam
-                  </a>
-                </li>
-              </ul>
-            </address>
-          </div>
+                </a>
+              </Link>
+            </div>
+          </address>
         </div>
       </div>
     </footer>
