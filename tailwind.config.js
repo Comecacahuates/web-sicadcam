@@ -55,7 +55,10 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      brightness: ["group-hover"],
+      scale: ["group-hover"],
+    },
   },
   plugins: [],
 };

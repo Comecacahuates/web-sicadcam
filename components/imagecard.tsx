@@ -18,7 +18,7 @@ export default function ImageCard(props: ImageCardProps) {
 
   /* Renderización */
   return (
-    <div className={`${className} relative`}>
+    <div className={`${className} relative overflow-hidden group`}>
       <Link href={href}>
         <a className="no-underline">
           <div className="absolute inset-0 z-10 px-3 md:px-10 flex items-center justify-center">
@@ -26,7 +26,7 @@ export default function ImageCard(props: ImageCardProps) {
           </div>
         </a>
       </Link>
-      <div className="absolute inset-0 filter brightness-40">
+      <div className="absolute inset-0 filter transition-brightness duration-500 brightness-40 group-hover:brightness-60 transform group-hover:scale-105">
         <Image
           src={src}
           alt={alt}
