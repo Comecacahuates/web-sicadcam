@@ -56,8 +56,10 @@ export default function Navbar(props: NavbarProps) {
       }`}
     >
       <div
-        className={`container mx-auto overflow-hidden md:overflow-visible transition-height duration-500 md:transition-none md:h-16 md:flex md:justify-between md:items-center ${
-          show ? "h-screen" : "h-16"
+        className={`container mx-auto md:overflow-visible transition-height duration-500 md:transition-none md:h-16 md:flex md:justify-between md:items-center ${
+          show
+            ? "h-screen overflow-y-auto overscroll-contain"
+            : "h-16 overflow-hidden"
         }`}
       >
         <div className="h-16 flex justify-between items-center">
