@@ -8,7 +8,8 @@ export interface IconProps extends React.HTMLProps<HTMLElement> {
 /** Componente de ícono */
 export default function Icon(props: IconProps) {
   const { icon, ...iProps } = props;
+  const { className, ...restProps } = iProps;
 
   /* Renderización */
-  return <i className={`bi bi-${icon}`} {...iProps} />;
+  return <i className={`bi bi-${icon} ${className}`} {...restProps} />;
 }
