@@ -27,37 +27,37 @@
     box-sizing: inherit;
   }
   h1 {
-    @apply text-gray-800 text-4xl md:text-5xl lg:text-7xl font-extrabold font-display leading-none my-6;
+    @apply text-my-blue-dark text-4xl md:text-5xl lg:text-7xl font-extrabold font-display leading-none my-6;
   }
   h2 {
-    @apply text-gray-800 text-4xl md:text-5xl lg:text-6xl font-extrabold font-display leading-tight my-4;
+    @apply text-gray-700 text-4xl md:text-5xl lg:text-6xl font-extrabold font-display leading-tight my-4;
   }
   h3 {
-    @apply text-gray-800 text-3xl md:text-4xl font-bold font-display leading-tight my-4;
+    @apply text-gray-800 text-2xl md:text-4xl font-bold font-display leading-tight my-4;
   }
   h4 {
-    @apply text-gray-800 text-2xl font-semibold font-display leading-tight my-4;
+    @apply text-gray-800 text-xl font-semibold font-display leading-tight my-4;
   }
   p {
     @apply text-base font-sans leading-normal my-4;
   }
   a {
-    @apply text-my-blue-dark underline visited:underline focus:outline-white hover:no-underline active:no-underline;
+    @apply text-my-blue underline visited:underline focus:outline-white hover:no-underline active:no-underline;
   }
 }
 
 @layer components {
   .h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-extrabold font-display leading-none my-6;
+    @apply text-my-blue-dark text-4xl md:text-5xl lg:text-6xl lg:text-7xl font-extrabold font-display leading-none my-6;
   }
   .h2 {
-    @apply text-4xl md:text-5xl lg:text-5xl font-extrabold font-display leading-tight my-4;
+    @apply text-gray-800 text-4xl md:text-5xl lg:text-5xl font-extrabold font-display leading-tight my-4;
   }
   .h3 {
-    @apply text-3xl md:text-4xl font-bold font-display leading-tight my-4;
+    @apply text-gray-800 text-2xl md:text-3xl font-bold font-display leading-tight my-4;
   }
   .h4 {
-    @apply text-gray-800 text-2xl font-semibold font-display leading-tight my-4;
+    @apply text-gray-800 text-xl font-semibold font-display leading-tight my-4;
   }
   .lead {
     @apply text-xl font-sans leading-normal;

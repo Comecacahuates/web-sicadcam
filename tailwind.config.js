@@ -13,12 +13,15 @@ module.exports = {
         "my-blue-dark": "#012240",
         "my-yellow": "#F2A71D",
         "my-gray": "#403E3E",
-        "my-white": "#F2F2F0",
       },
       transitionProperty: {
         height: "height",
       },
       spacing: {
+        112: "28rem",
+        128: "32rem",
+        144: "36rem",
+        160: "40rem",
         // vw units
         "10vw": "10vw",
         "20vw": "20vw",
@@ -58,6 +61,9 @@ module.exports = {
     extend: {
       brightness: ["group-hover"],
       scale: ["group-hover"],
+    },
+    extend: {
+      backgroundColor: ["odd"],
     },
   },
   plugins: [],
