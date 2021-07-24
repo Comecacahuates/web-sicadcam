@@ -51,15 +51,13 @@ export default function Navbar(props: NavbarProps) {
   /* Renderización */
   return (
     <nav
-      className={`w-full px-3 sticky top-0 z-50 transition-colors duration-500 shadow-md md:bg-my-blue ${
+      className={`w-full px-3 sticky top-0 z-50 transition-colors duration-500 shadow-md md:bg-my-blue overscroll-contain ${
         show ? "bg-my-blue-dark" : "bg-my-blue"
       }`}
     >
       <div
-        className={`container mx-auto md:overflow-visible transition-height duration-500 md:transition-none md:h-16 md:flex md:justify-between md:items-center ${
-          show
-            ? "h-screen overflow-y-auto overscroll-contain"
-            : "h-16 overflow-hidden"
+        className={`container mx-auto md:overflow-visible overscroll-contain transition-height duration-500 md:transition-none md:h-16 md:flex md:justify-between md:items-center ${
+          show ? "h-screen overflow-y-auto" : "h-16 overflow-hidden"
         }`}
       >
         <div className="h-16 flex justify-between items-center">
@@ -148,7 +146,7 @@ function NavbarItem(props: NavbarItemProps) {
         </a>
       </Link>
       {children ? (
-        <ul className="ml-3 mt-3 md:m-0 md:pt-3 md:px-3 md:w-36 md:absolute md:left-0 md:top-6 md:bg-my-blue md:rounded-b-md md:shadow-2xl md:opacity-0 md:transition-opacity md:duration-500 md:group-hover:opacity-100">
+        <ul className="ml-3 mt-3 md:m-0 md:pt-3 md:px-3 md:w-36 md:absolute md:left-0 md:top-6 md:bg-my-blue md:rounded-b-md md:shadow-md md:opacity-0 md:transition-opacity md:duration-500 md:group-hover:opacity-100">
           {children}
         </ul>
       ) : null}
