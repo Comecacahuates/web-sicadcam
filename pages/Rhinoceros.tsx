@@ -7,81 +7,6 @@ import PriceCard from "../components/pricecard";
 import PriceComparison from "../components/pricecomparison";
 import Icon from "../components/icon";
 
-/* Tabla de precios */
-type PriceTable = {
-  product: string;
-  prices: Price[];
-};
-/* Elemento de la tabla de precios */
-type Price = {
-  title: string;
-  update?: string;
-  users: string;
-  multipleUsers?: boolean;
-  priceWin: string;
-  priceMac?: string;
-};
-/* Tabla de precios de Flamingo */
-const flamingoPriceTable: PriceTable = {
-  product: "Flamingo nXt 5",
-  prices: [
-    {
-      title: "Licencia comercial",
-      users: "1 usuario",
-      priceWin: "495 USD",
-    },
-    {
-      title: "Licencia comercial",
-      update: "Actualización desde Flamingo 1 o 2",
-      users: "1 usuario",
-      priceWin: "295 USD",
-    },
-    {
-      title: "Licencia comercial",
-      update: "Actualización desde Flamingo nXt",
-      users: "1 usuario",
-      priceWin: "Gratis",
-    },
-    {
-      title: "Licencia educacional",
-      users: "1 usuario",
-      priceWin: "195 USD",
-    },
-    {
-      title: "Licencia educacional",
-      update: "Actualización desde Flamingo 1 o 2",
-      users: "1 usuario",
-      priceWin: "95 USD",
-    },
-    {
-      title: "Licencia educacional",
-      update: "Actualización desde Flamingo nXt",
-      users: "1 usuario",
-      priceWin: "Gratis",
-    },
-    {
-      title: "Licencia de laboratorio",
-      users: "30 usuarios",
-      multipleUsers: true,
-      priceWin: "675 USD",
-    },
-    {
-      title: "Licencia de laboratorio",
-      update: "Actualización desde Flamingo 1 o 2",
-      users: "30 usuarios",
-      multipleUsers: true,
-      priceWin: "195 USD",
-    },
-    {
-      title: "Licencia de laboratorio",
-      update: "Actualización desde Flamingo nXt",
-      users: "30 usuarios",
-      multipleUsers: true,
-      priceWin: "Gratis",
-    },
-  ],
-};
-
 export default function Rhinoceros() {
   return (
     <Layout
@@ -106,7 +31,7 @@ export default function Rhinoceros() {
         </SideImage>
         {/* Accesible */}
         <SideImage
-          className="lg:h-screen"
+          className="lg:min-h-screen"
           reverse={true}
           src="https://placeimg.com/640/480/nature"
           alt=""
@@ -115,12 +40,12 @@ export default function Rhinoceros() {
             <div>
               <h2>Diseño 3D para todos y todas</h2>
               <h3>Versátil</h3>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 Un software con el que podrás crear, transformar, analizar,
                 renderizar y animar curvas y superficies NURBS, mallas
                 poligonales, nubes de puntos y superficies de subdivisión.
               </p>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 Es compatible con la gran mayoría de software de{" "}
                 <abbr
                   className="cursor-pointer"
@@ -134,11 +59,11 @@ export default function Rhinoceros() {
                 <strong>Mac</strong>.
               </p>
               <h3>Accesible</h3>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 Rhino es tan fácil de aprender, que no tendrás que preocuparte
                 por cómo usarlo y podrás enfocarte por completo en el diseño
               </p>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 A diferencia de la mayoría de los programas de CAD, Rhino es muy
                 económico, ya que no requiere hardware costoso, su precio es muy
                 bajo y no debes pagar cuotas anuales.
@@ -150,19 +75,19 @@ export default function Rhinoceros() {
       {/* Modelado orgánico */}
       <section>
         <SideImage
-          className="lg:h-screen"
+          className="lg:min-h-screen"
           src="https://placeimg.com/640/480/nature"
           alt=""
         >
           <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:justify-center">
             <div>
               <h2>Modelado orgánico</h2>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 En Rhino 7 se introdujo un nuevo tipo de geometría llamado SubD,
                 con el que podrás realizar modelos 3D como si estuvieras
                 moldeando plastilina con las manos.
               </p>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 A diferencia de las superficies NURBS, con SubD obtienes
                 superficies uniformes y fáciles de modificar mediante la
                 extrusión de caras y manipulación de puntos de control,
@@ -175,7 +100,7 @@ export default function Rhinoceros() {
       <section>
         {/* Renderización */}
         <SideImage
-          className="lg:h-screen"
+          className="lg:min-h-screen"
           reverse={true}
           src="https://placeimg.com/640/480/nature"
           alt=""
@@ -184,20 +109,20 @@ export default function Rhinoceros() {
             <div>
               <h2>Renderización</h2>
               <h3>Renderizador de Rhino</h3>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 Rhino 7 incluye herramientas nuevas y mejoradas para generar
                 imágenes fotorrealísticas de gran calidad y renderizado en
                 tiempo real.
               </p>
               <h3>Flamingo nXt</h3>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 Un <i>plugin</i> de renderizado fotorrealístico para Rhino,
                 fácil de usar y con características avanzadas. Con él, podrás
                 configurar rápidamente las propiedades de los objetos y el
                 ambiente de una escena, como los materiales, texturas,
                 iluminación y sombras, plantas, etc.
               </p>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 Asigna materiales arrastrando y soltando en cada objeto. Utiliza
                 los materiales de la biblioteca incluida, o modifícalos y crea
                 tus propios materiales con propiedades personalizadas.
@@ -209,7 +134,7 @@ export default function Rhinoceros() {
       <section>
         {/* Licencias */}
         <SideImage
-          className="lg:h-screen"
+          className="lg:min-h-screen"
           src="https://placeimg.com/640/480/nature"
           alt=""
         >
@@ -217,13 +142,13 @@ export default function Rhinoceros() {
             <div>
               <h2>Administración de licencias</h2>
               <h3>Usa Rhino donde quieras</h3>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 Si no tienes disponible tu computadora personal, instala Rhino
                 en cualquier computadora y obtén acceso a tu licencia mediante
                 el administrador de licencias en la nube.
               </p>
               <h3>Licencias compartidas</h3>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 Comparte licencias fácilmente entre miembros de un equipo de
                 trabajo o estudiantes en una escuela, dentro de una red local o
                 en la nube. Concede y revoca el acceso a las personas que
@@ -234,7 +159,7 @@ export default function Rhinoceros() {
         </SideImage>
         {/* Software extensible */}
         <SideImage
-          className="lg:h-screen"
+          className="lg:min-h-screen"
           reverse={true}
           src="https://placeimg.com/640/480/nature"
           alt=""
@@ -245,7 +170,7 @@ export default function Rhinoceros() {
               <h3>
                 Amplio catálogo de <i>plugins</i>
               </h3>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 Encuentra{" "}
                 <Link href="https://www.food4rhino.com/es">
                   <a target="_blank">
@@ -257,7 +182,7 @@ export default function Rhinoceros() {
                 trabajo.
               </p>
               <h3>Herramientas de desarrollo</h3>
-              <p className="text-justify lead">
+              <p className="lg:text-justify lead">
                 Con las{" "}
                 <Link href="https://developer.rhino3d.com/">
                   <a target="_blank">
@@ -276,7 +201,7 @@ export default function Rhinoceros() {
       {/* Precios */}
       <section>
         <div className="lg:container mx-auto px-3 my-60">
-          <h2 className="md:text-center">Precios</h2>
+          <h2 className="text-center">Precios</h2>
           {/* Precios de Rhino */}
           <div className="my-20">
             <h3 className="text-center">Licencia de Rhinoceros 7</h3>

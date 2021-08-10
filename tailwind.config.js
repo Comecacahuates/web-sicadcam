@@ -24,6 +24,9 @@ module.exports = {
       transitionProperty: {
         height: "height",
       },
+      minHeight: {
+        screen: "100vh",
+      },
       spacing: {
         112: "28rem",
         128: "32rem",
