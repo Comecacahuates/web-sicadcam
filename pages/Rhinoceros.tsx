@@ -4,6 +4,7 @@ import Image from "next/image";
 import Layout from "../components/layout";
 import SideImage from "../components/sideimage";
 import PriceCard from "../components/pricecard";
+import PriceComparison from "../components/pricecomparison";
 import Icon from "../components/icon";
 
 /* Tabla de precios */
@@ -278,8 +279,8 @@ export default function Rhinoceros() {
           <h2 className="md:text-center">Precios</h2>
           {/* Precios de Rhino */}
           <div className="my-20">
-            <h3 className="text-center">Licencia de Rhinoceros</h3>
-            <div className="flex flex-col md:grid md:grid-cols-3 gap-12 md:gap-3 lg:gap-6 xl:gap-12 xl:w-4/5 2xl:w-3/4 mx-auto">
+            <h3 className="text-center">Licencia de Rhinoceros 7</h3>
+            <PriceComparison>
               {/* Licencia educacional */}
               <PriceCard
                 title="Educacional"
@@ -293,7 +294,12 @@ export default function Rhinoceros() {
                 </p>
                 <p className="flex">
                   <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
-                  Actualización: $95 USD
+                  <span>
+                    Actualización:{" "}
+                    <b>
+                      $95 <span className="text-xs">USD</span>
+                    </b>
+                  </span>
                 </p>
                 <p className="flex">
                   <Icon className="w-8 flex-none" icon="person-fill" /> 1
@@ -319,7 +325,12 @@ export default function Rhinoceros() {
                 </p>
                 <p className="flex">
                   <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
-                  Actualización: $595 USD
+                  <span>
+                    Actualización:{" "}
+                    <b>
+                      $595 <span className="text-xs">USD</span>
+                    </b>
+                  </span>
                 </p>
                 <p className="flex">
                   <Icon className="w-8 flex-none" icon="person-fill" /> 1
@@ -345,7 +356,12 @@ export default function Rhinoceros() {
                 </p>
                 <p className="flex">
                   <Icon className="w-8 flex-none" icon="arrow-up" />
-                  Actualización: $295 USD
+                  <span>
+                    Actualización:{" "}
+                    <b>
+                      $295 <span className="text-xs">USD</span>
+                    </b>
+                  </span>
                 </p>
                 <p className="flex">
                   <Icon className="w-8 flex-none" icon="people-fill" />{" "}
@@ -360,66 +376,125 @@ export default function Rhinoceros() {
                   Mac
                 </p>
               </PriceCard>
-            </div>
+            </PriceComparison>
           </div>
-        </div>
-      </section>
-      {/* Precios */}
-      <section className="bg-gray-50">
-        <div className="px-3 w-full lg:container mx-auto my-20">
-          <h2>Precios</h2>
-          {[flamingoPriceTable].map((priceTable: PriceTable, index: number) => (
-            <React.Fragment key={index}>
-              <h3 className="sticky top-16 bg-gray-50 py-4">
-                {priceTable.product}
-              </h3>
-              <div className="overflow-x-auto w-full mb-8">
-                <table className="table-fixed border-collapse w-144 lg:w-full lg:w-2/3 xl:w-1/2">
-                  <thead>
-                    <tr className="py-2 px-2 border-t border-gray-500">
-                      <th className="w-3/5 lg:w-4/6 text-left px-4 py-4"></th>
-                      <th className="w-1/5 lg:w-1/6 text-right px-4 py-4">
-                        Windows
-                      </th>
-                      <th className="w-1/5 lg:w-1/6 text-right px-4 py-4">
-                        Mac
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="border-t border-b border-gray-500">
-                    {priceTable.prices.map((price: Price, index: number) => (
-                      <tr key={index} className="odd:bg-white">
-                        <td className="px-4 py-4">
-                          {price.title}
-                          <span className="text-sm text-gray-600">
-                            {price.update ? (
-                              <React.Fragment>
-                                <br />
-                                <Icon icon="arrow-up" /> {price.update}
-                              </React.Fragment>
-                            ) : null}
-                            <br />
-                            {price.multipleUsers ? (
-                              <Icon icon="people-fill" />
-                            ) : (
-                              <Icon icon="person-fill" />
-                            )}{" "}
-                            {price.users}
-                          </span>
-                        </td>
-                        <td className="text-right px-4 py-4">
-                          {price.priceWin}
-                        </td>
-                        <td className="text-right px-4 py-4">
-                          {price.priceMac || <Icon icon="x" />}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </React.Fragment>
-          ))}
+          {/* Precios de Flamingo */}
+          <div className="my-20">
+            <h3 className="text-center">Licencia de Flamingo nXt 5</h3>
+            <PriceComparison>
+              {/* Licencia educacional */}
+              <PriceCard
+                title="Educacional"
+                price="195"
+                currency="USD"
+                color="bg-my-purple-3"
+              >
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="book-fill" /> Para
+                  estudiantes y profesores
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                  <span>
+                    Actualización desde Flamingo 1 y 2:{" "}
+                    <b>
+                      $95 <span className="text-xs">USD</span>
+                    </b>
+                  </span>
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="arrow-up" />
+                  <span>
+                    Actualización desde Flamingo nXt: <b>Gratis</b>
+                  </span>
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="person-fill" /> 1
+                  usuario
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="check" /> Windows
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="x" /> Mac
+                </p>
+              </PriceCard>
+              {/* Licencia comercial */}
+              <PriceCard
+                title="Comcercial"
+                price="495"
+                currency="USD"
+                color="bg-my-purple-2"
+              >
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="person-circle" /> Para
+                  todo uso
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                  <span>
+                    Actualización desde Flamingo 1 y 2:{" "}
+                    <b>
+                      $295 <span className="text-xs">USD</span>
+                    </b>
+                  </span>
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                  <span>
+                    Actualización desde Flamingo nXt: <b>Gratis</b>
+                  </span>
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="person-fill" /> 1
+                  usuario
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="check" /> Windows
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="x" /> Mac
+                </p>
+              </PriceCard>
+              {/* Licencia de laboratorio */}
+              <PriceCard
+                title="Laboratorio"
+                price="675"
+                currency="USD"
+                color="bg-my-purple-3"
+              >
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="award-fill" /> Para
+                  escuelas y universidades
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                  <span>
+                    Actualización desde Flamingo 1 y 2:{" "}
+                    <b>
+                      $195 <span className="text-xs">USD</span>
+                    </b>{" "}
+                  </span>
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                  <span>
+                    Actualización desde Flamingo nXt: <b>Gratis</b>
+                  </span>
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="people-fill" /> 30
+                  usuarioas
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="check" /> Windows
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="x" /> Mac
+                </p>
+              </PriceCard>
+            </PriceComparison>
+          </div>
         </div>
       </section>
     </Layout>
