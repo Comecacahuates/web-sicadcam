@@ -2,7 +2,7 @@ import * as React from "react";
 import Image from "next/image";
 
 /* Propiedades del componente de imagen lateral */
-export interface SideImageProps {
+export interface SideImageProps extends React.HTMLProps<HTMLDivElement> {
   src: string;
   alt: string;
   reverse?: boolean;
@@ -12,11 +12,15 @@ export interface SideImageProps {
 /* Componente de imagen lateral */
 export default function SideImage(props: SideImageProps) {
   /* Propiedades */
-  const { src, alt, reverse, children } = props;
+  const { src, alt, reverse, children, ...divProps } = props;
+  const { className, ...restProps } = divProps;
 
   /* Renderización */
   return (
-    <div className="lg:h-screen lg:overflow-y-auto lg:grid lg:grid-cols-12">
+    <div
+      className={`lg:overflow-y-auto lg:grid lg:grid-cols-12 ${className}`}
+      {...restProps}
+    >
       <div
         className={`px-3 lg:px-8 ${
           reverse

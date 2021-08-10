@@ -31,7 +31,7 @@ export default function Layout(props: LayoutProps) {
 
   /* Renderización */
   return (
-    <div className="bg-my-white">
+    <div className="bg-white">
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
