@@ -9,10 +9,17 @@ module.exports = {
     },
     extend: {
       colors: {
-        "my-blue": "#034C8C",
-        "my-blue-dark": "#012240",
+        "my-blue": "#03658C",
+        "my-blue-dark": "#024059",
+        "my-blue-light": "#048ABF",
         "my-yellow": "#F2A71D",
         "my-gray": "#403E3E",
+        "my-black": "#171C26",
+        "my-purple-1": "#25064C",
+        "my-purple-2": "#36175E",
+        "my-purple-3": "#553285",
+        "my-purple-4": "#7B52AB",
+        "my-purple-5": "#9768D1",
       },
       transitionProperty: {
         height: "height",
