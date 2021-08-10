@@ -13,18 +13,18 @@ export default function Footer() {
           <p className="h4 text-white">Diseño 3D</p>
           <ul>
             <li className="mb-3">
-              <Link href="#">
+              <Link href="/Rhinoceros">
                 <a className="text-white">Rhinoceros</a>
               </Link>
             </li>
             <li className="mb-3">
-              <Link href="#">
+              <Link href="/Grasshopper">
                 <a className="text-white">Grasshopper</a>
               </Link>
             </li>
             <li className="mb-3">
-              <Link href="#">
-                <a className="text-white">Digitalizadores MicroScribe</a>
+              <Link href="/IngenieriaInversa">
+                <a className="text-white">Ingeniería inversa</a>
               </Link>
             </li>
           </ul>
@@ -34,17 +34,17 @@ export default function Footer() {
           <p className="h4 text-white">Fabricación</p>
           <ul>
             <li className="mb-3">
-              <Link href="#">
+              <Link href="/RhinoCAM">
                 <a className="text-white">RhinoCAM</a>
               </Link>
             </li>
             <li className="mb-3">
-              <Link href="#">
+              <Link href="/MaquinasCNC">
                 <a className="text-white">Máquinas CNC</a>
               </Link>
             </li>
             <li className="mb-3">
-              <Link href="#">
+              <Link href="/Impresoras3D">
                 <a className="text-white">Impresoras 3D</a>
               </Link>
             </li>
@@ -55,7 +55,7 @@ export default function Footer() {
           <p className="h4 text-white">Educación</p>
           <ul>
             <li className="mb-3">
-              <Link href="#">
+              <Link href="/Cursos">
                 <a className="text-white">Cursos de capacitación</a>
               </Link>
             </li>
