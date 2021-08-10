@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/layout";
 import SideImage from "../components/sideimage";
+import PriceCard from "../components/pricecard";
 import Icon from "../components/icon";
 
 /* Tabla de precios */
@@ -18,53 +19,6 @@ type Price = {
   multipleUsers?: boolean;
   priceWin: string;
   priceMac?: string;
-};
-/* Tabla de precios de Rhino */
-const rhinoPriceTable: PriceTable = {
-  product: "Rhinoceros 7",
-  prices: [
-    {
-      title: "Licencia comercial",
-      users: "1 usuario",
-      priceWin: "995 USD",
-      priceMac: "995 USD",
-    },
-    {
-      title: "Licencia comercial",
-      update: "Actualización desde cualquier versión",
-      users: "1 usuario",
-      priceWin: "595 USD",
-      priceMac: "595 USD",
-    },
-    {
-      title: "Licencia educacional",
-      users: "1 usuario",
-      priceWin: "195 USD",
-      priceMac: "195 USD",
-    },
-    {
-      title: "Licencia educacional",
-      update: "Actualización desde cualquier versión",
-      users: "1 usuario",
-      priceWin: "95 USD",
-      priceMac: "95 USD",
-    },
-    {
-      title: "Licencia de laboratorio",
-      users: "30 usuarios",
-      multipleUsers: true,
-      priceWin: "975 USD",
-      priceMac: "975 USD",
-    },
-    {
-      title: "Licencia de laboratorio",
-      update: "Actualización desde cualquier versión",
-      users: "30 usuarios",
-      multipleUsers: true,
-      priceWin: "295 USD",
-      priceMac: "295 USD",
-    },
-  ],
 };
 /* Tabla de precios de Flamingo */
 const flamingoPriceTable: PriceTable = {
@@ -133,12 +87,16 @@ export default function Rhinoceros() {
       route="/Rhinoceros"
       title="Rhinoceros | Servicios de Ingeniería CAD/CAM"
       author="Adrián Juárez Monroy"
-      description="Rhinoceros: software de diseño 3D"
+      description="Rhinoceros: software de diseño 3D."
     >
       <section>
         {/* Título */}
-        <SideImage src="https://placeimg.com/640/480/nature" alt="">
-          <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:items-stretch lg:justify-center">
+        <SideImage
+          className="lg:h-screen"
+          src="https://placeimg.com/640/480/nature"
+          alt=""
+        >
+          <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:justify-center">
             <div>
               <h1>Rhinoceros</h1>
               <h2>La navaja suiza del diseño 3D</h2>
@@ -147,12 +105,14 @@ export default function Rhinoceros() {
         </SideImage>
         {/* Accesible */}
         <SideImage
+          className="lg:h-screen"
           reverse={true}
           src="https://placeimg.com/640/480/nature"
           alt=""
         >
-          <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:items-stretch lg:justify-center">
+          <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:justify-center">
             <div>
+              <h2>Diseño 3D para todos y todas</h2>
               <h3>Versátil</h3>
               <p className="text-justify lead">
                 Un software con el que podrás crear, transformar, analizar,
@@ -172,13 +132,10 @@ export default function Rhinoceros() {
                 largo etcétera. Disponible para <strong>Windows</strong> y{" "}
                 <strong>Mac</strong>.
               </p>
-            </div>
-            <div>
               <h3>Accesible</h3>
               <p className="text-justify lead">
-                Ya que Rhino es tan fácil de aprender, no tendrás que
-                preocuparte por cómo usarlo y podrás enfocarte por completo en
-                el diseño
+                Rhino es tan fácil de aprender, que no tendrás que preocuparte
+                por cómo usarlo y podrás enfocarte por completo en el diseño
               </p>
               <p className="text-justify lead">
                 A diferencia de la mayoría de los programas de CAD, Rhino es muy
@@ -191,8 +148,12 @@ export default function Rhinoceros() {
       </section>
       {/* Modelado orgánico */}
       <section>
-        <SideImage src="https://placeimg.com/640/480/nature" alt="">
-          <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:items-stretch lg:justify-center">
+        <SideImage
+          className="lg:h-screen"
+          src="https://placeimg.com/640/480/nature"
+          alt=""
+        >
+          <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:justify-center">
             <div>
               <h2>Modelado orgánico</h2>
               <p className="text-justify lead">
@@ -213,23 +174,20 @@ export default function Rhinoceros() {
       <section>
         {/* Renderización */}
         <SideImage
+          className="lg:h-screen"
           reverse={true}
           src="https://placeimg.com/640/480/nature"
           alt=""
         >
-          <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:items-stretch lg:justify-center">
+          <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:justify-center">
             <div>
               <h2>Renderización</h2>
-            </div>
-            <div>
               <h3>Renderizador de Rhino</h3>
               <p className="text-justify lead">
                 Rhino 7 incluye herramientas nuevas y mejoradas para generar
                 imágenes fotorrealísticas de gran calidad y renderizado en
                 tiempo real.
               </p>
-            </div>
-            <div>
               <h3>Flamingo nXt</h3>
               <p className="text-justify lead">
                 Un <i>plugin</i> de renderizado fotorrealístico para Rhino,
@@ -249,20 +207,20 @@ export default function Rhinoceros() {
       </section>
       <section>
         {/* Licencias */}
-        <SideImage src="https://placeimg.com/640/480/nature" alt="">
-          <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:items-stretch lg:justify-center">
+        <SideImage
+          className="lg:h-screen"
+          src="https://placeimg.com/640/480/nature"
+          alt=""
+        >
+          <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:justify-center">
             <div>
               <h2>Administración de licencias</h2>
-            </div>
-            <div>
               <h3>Usa Rhino donde quieras</h3>
               <p className="text-justify lead">
                 Si no tienes disponible tu computadora personal, instala Rhino
                 en cualquier computadora y obtén acceso a tu licencia mediante
                 el administrador de licencias en la nube.
               </p>
-            </div>
-            <div>
               <h3>Licencias compartidas</h3>
               <p className="text-justify lead">
                 Comparte licencias fácilmente entre miembros de un equipo de
@@ -273,17 +231,16 @@ export default function Rhinoceros() {
             </div>
           </div>
         </SideImage>
-        {/* Extensible */}
+        {/* Software extensible */}
         <SideImage
+          className="lg:h-screen"
           reverse={true}
           src="https://placeimg.com/640/480/nature"
           alt=""
         >
-          <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:items-stretch lg:justify-center">
+          <div className="my-20 lg:m-0 h-full lg:flex lg:flex-col lg:justify-center">
             <div>
-              <h2>Extensible</h2>
-            </div>
-            <div>
+              <h2>Software extensible</h2>
               <h3>
                 Amplio catálogo de <i>plugins</i>
               </h3>
@@ -294,11 +251,10 @@ export default function Rhinoceros() {
                     <i>plugins</i> <Icon icon="box-arrow-up-right" />
                   </a>
                 </Link>{" "}
-                para una gran variedad de aplicaciones específicas o para
-                agilizar tu flujo de trabajo.
+                para una gran variedad de aplicaciones (joyería, calzado,
+                arquitectura, diseño mecánico, etc) o para agilizar tu flujo de
+                trabajo.
               </p>
-            </div>
-            <div>
               <h3>Herramientas de desarrollo</h3>
               <p className="text-justify lead">
                 Con las{" "}
@@ -317,63 +273,153 @@ export default function Rhinoceros() {
         </SideImage>
       </section>
       {/* Precios */}
+      <section>
+        <div className="lg:container mx-auto px-3 my-60">
+          <h2 className="md:text-center">Precios</h2>
+          {/* Precios de Rhino */}
+          <div className="my-20">
+            <h3 className="text-center">Licencia de Rhinoceros</h3>
+            <div className="flex flex-col md:grid md:grid-cols-3 gap-12 md:gap-3 lg:gap-6 xl:gap-12 xl:w-4/5 2xl:w-3/4 mx-auto">
+              {/* Licencia educacional */}
+              <PriceCard
+                title="Educacional"
+                price="595"
+                currency="USD"
+                color="bg-my-purple-3"
+              >
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="book-fill" /> Para
+                  estudiantes y profesores
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                  Actualización: $95 USD
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="person-fill" /> 1
+                  usuario
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="check" /> Windows
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="check" /> Mac
+                </p>
+              </PriceCard>
+              {/* Licencia comercial */}
+              <PriceCard
+                title="Comercial"
+                price="995"
+                currency="USD"
+                color="bg-my-purple-2"
+              >
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="person-circle" /> Para
+                  todo uso
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                  Actualización: $595 USD
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="person-fill" /> 1
+                  usuario
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="check" /> Windows
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="check" /> Mac
+                </p>
+              </PriceCard>
+              {/* Licencia de laboratorio */}
+              <PriceCard
+                title="Laboratorio"
+                price="975"
+                currency="USD"
+                color="bg-my-purple-3"
+              >
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="award-fill" /> Para
+                  escuelas y universidades
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="arrow-up" />
+                  Actualización: $295 USD
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="people-fill" />{" "}
+                  <span className="flex-1">30 usuarios</span>
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="check" />
+                  Windows
+                </p>
+                <p className="flex">
+                  <Icon className="w-8 flex-none" icon="check" />
+                  Mac
+                </p>
+              </PriceCard>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Precios */}
       <section className="bg-gray-50">
-        <div className="px-3 w-full lg:container mx-auto my-20 overflow-x-hidden">
+        <div className="px-3 w-full lg:container mx-auto my-20">
           <h2>Precios</h2>
-          {[rhinoPriceTable, flamingoPriceTable].map(
-            (priceTable: PriceTable, index: number) => (
-              <React.Fragment key={index}>
-                <h3 className="sticky top-16 bg-gray-50 py-4">
-                  {priceTable.product}
-                </h3>
-                <div className="overflow-x-auto w-full mb-8">
-                  <table className="table-fixed border-collapse w-144 lg:w-full lg:w-2/3 xl:w-1/2">
-                    <thead>
-                      <tr className="py-2 px-2 border-t border-gray-500">
-                        <th className="w-3/5 lg:w-4/6 text-left px-4 py-4"></th>
-                        <th className="w-1/5 lg:w-1/6 text-right px-4 py-4">
-                          Windows
-                        </th>
-                        <th className="w-1/5 lg:w-1/6 text-right px-4 py-4">
-                          Mac
-                        </th>
+          {[flamingoPriceTable].map((priceTable: PriceTable, index: number) => (
+            <React.Fragment key={index}>
+              <h3 className="sticky top-16 bg-gray-50 py-4">
+                {priceTable.product}
+              </h3>
+              <div className="overflow-x-auto w-full mb-8">
+                <table className="table-fixed border-collapse w-144 lg:w-full lg:w-2/3 xl:w-1/2">
+                  <thead>
+                    <tr className="py-2 px-2 border-t border-gray-500">
+                      <th className="w-3/5 lg:w-4/6 text-left px-4 py-4"></th>
+                      <th className="w-1/5 lg:w-1/6 text-right px-4 py-4">
+                        Windows
+                      </th>
+                      <th className="w-1/5 lg:w-1/6 text-right px-4 py-4">
+                        Mac
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="border-t border-b border-gray-500">
+                    {priceTable.prices.map((price: Price, index: number) => (
+                      <tr key={index} className="odd:bg-white">
+                        <td className="px-4 py-4">
+                          {price.title}
+                          <span className="text-sm text-gray-600">
+                            {price.update ? (
+                              <React.Fragment>
+                                <br />
+                                <Icon icon="arrow-up" /> {price.update}
+                              </React.Fragment>
+                            ) : null}
+                            <br />
+                            {price.multipleUsers ? (
+                              <Icon icon="people-fill" />
+                            ) : (
+                              <Icon icon="person-fill" />
+                            )}{" "}
+                            {price.users}
+                          </span>
+                        </td>
+                        <td className="text-right px-4 py-4">
+                          {price.priceWin}
+                        </td>
+                        <td className="text-right px-4 py-4">
+                          {price.priceMac || <Icon icon="x" />}
+                        </td>
                       </tr>
-                    </thead>
-                    <tbody className="border-t border-b border-gray-500">
-                      {priceTable.prices.map((price: Price, index: number) => (
-                        <tr key={index} className="odd:bg-white">
-                          <td className="px-4 py-4">
-                            {price.title}
-                            <span className="text-sm text-gray-600">
-                              {price.update ? (
-                                <React.Fragment>
-                                  <br />
-                                  <Icon icon="arrow-up" /> {price.update}
-                                </React.Fragment>
-                              ) : null}
-                              <br />
-                              {price.multipleUsers ? (
-                                <Icon icon="people-fill" />
-                              ) : (
-                                <Icon icon="person-fill" />
-                              )}{" "}
-                              {price.users}
-                            </span>
-                          </td>
-                          <td className="text-right px-4 py-4">
-                            {price.priceWin}
-                          </td>
-                          <td className="text-right px-4 py-4">
-                            {price.priceMac || <Icon icon="x" />}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </React.Fragment>
-            )
-          )}
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </React.Fragment>
+          ))}
         </div>
       </section>
     </Layout>
