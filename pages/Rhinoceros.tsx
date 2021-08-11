@@ -4,7 +4,7 @@ import Image from "next/image";
 import Layout from "../components/layout";
 import SideImage from "../components/sideimage";
 import PriceCard from "../components/pricecard";
-import PriceComparison from "../components/pricecomparison";
+import CardsContainer from "../components/cardscontainer";
 import Icon from "../components/icon";
 
 export default function Rhinoceros() {
@@ -198,6 +198,7 @@ export default function Rhinoceros() {
           </div>
         </SideImage>
       </section>
+      <hr />
       {/* Precios */}
       <section>
         <div className="lg:container mx-auto px-3 my-60">
@@ -205,9 +206,10 @@ export default function Rhinoceros() {
           {/* Precios de Rhino */}
           <div className="my-20">
             <h3 className="text-center">Licencia de Rhinoceros 7</h3>
-            <PriceComparison>
+            <CardsContainer>
               {/* Licencia educacional */}
               <PriceCard
+                className="w-1/3"
                 title="Educacional"
                 price="595"
                 currency="USD"
@@ -239,14 +241,15 @@ export default function Rhinoceros() {
               </PriceCard>
               {/* Licencia comercial */}
               <PriceCard
+                className="w-1/3"
                 title="Comercial"
                 price="995"
                 currency="USD"
-                color="bg-my-purple-2"
+                color="bg-my-purple-3"
               >
                 <p className="flex">
-                  <Icon className="w-8 flex-none" icon="person-circle" /> Para
-                  todo uso
+                  <Icon className="w-8 flex-none" icon="unlock-fill" /> Para
+                  cualquier uso
                 </p>
                 <p className="flex">
                   <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
@@ -270,6 +273,7 @@ export default function Rhinoceros() {
               </PriceCard>
               {/* Licencia de laboratorio */}
               <PriceCard
+                className="w-1/3"
                 title="Laboratorio"
                 price="975"
                 currency="USD"
@@ -301,14 +305,15 @@ export default function Rhinoceros() {
                   Mac
                 </p>
               </PriceCard>
-            </PriceComparison>
+            </CardsContainer>
           </div>
           {/* Precios de Flamingo */}
           <div className="my-20">
             <h3 className="text-center">Licencia de Flamingo nXt 5</h3>
-            <PriceComparison>
+            <CardsContainer>
               {/* Licencia educacional */}
               <PriceCard
+                className="w-1/3"
                 title="Educacional"
                 price="195"
                 currency="USD"
@@ -346,14 +351,15 @@ export default function Rhinoceros() {
               </PriceCard>
               {/* Licencia comercial */}
               <PriceCard
+                className="w-1/3"
                 title="Comcercial"
                 price="495"
                 currency="USD"
-                color="bg-my-purple-2"
+                color="bg-my-purple-3"
               >
                 <p className="flex">
-                  <Icon className="w-8 flex-none" icon="person-circle" /> Para
-                  todo uso
+                  <Icon className="w-8 flex-none" icon="unlock-fill" /> Para
+                  cualquier uso
                 </p>
                 <p className="flex">
                   <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
@@ -383,6 +389,7 @@ export default function Rhinoceros() {
               </PriceCard>
               {/* Licencia de laboratorio */}
               <PriceCard
+                className="w-1/3"
                 title="Laboratorio"
                 price="675"
                 currency="USD"
@@ -418,7 +425,7 @@ export default function Rhinoceros() {
                   <Icon className="w-8 flex-none" icon="x" /> Mac
                 </p>
               </PriceCard>
-            </PriceComparison>
+            </CardsContainer>
           </div>
         </div>
       </section>
