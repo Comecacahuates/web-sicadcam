@@ -61,10 +61,13 @@
     @apply bg-my-purple-3 text-white;
   }
   thead th {
-    @apply px-3 py-4 font-display text-lg;
+    @apply px-3 py-6 font-display text-lg;
   }
   tbody tr {
     @apply border-t border-gray-300 even:bg-gray-100;
+  }
+  tbody td {
+    @apply px-3 py-4;
   }
 }
 

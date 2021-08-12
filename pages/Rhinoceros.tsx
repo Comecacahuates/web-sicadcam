@@ -4,7 +4,6 @@ import Image from "next/image";
 import Layout from "../components/layout";
 import SideImage from "../components/sideimage";
 import PriceCard from "../components/pricecard";
-import CardsContainer from "../components/cardscontainer";
 import Icon from "../components/icon";
 
 export default function Rhinoceros() {
@@ -206,10 +205,9 @@ export default function Rhinoceros() {
           {/* Precios de Rhino */}
           <div className="my-20">
             <h3 className="text-center">Licencia de Rhinoceros 7</h3>
-            <CardsContainer>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 lg:gap-6 xl:gap-12">
               {/* Licencia educacional */}
               <PriceCard
-                className="w-1/3"
                 title="Educacional"
                 price="595"
                 currency="USD"
@@ -241,7 +239,6 @@ export default function Rhinoceros() {
               </PriceCard>
               {/* Licencia comercial */}
               <PriceCard
-                className="w-1/3"
                 title="Comercial"
                 price="995"
                 currency="USD"
@@ -273,7 +270,6 @@ export default function Rhinoceros() {
               </PriceCard>
               {/* Licencia de laboratorio */}
               <PriceCard
-                className="w-1/3"
                 title="Laboratorio"
                 price="975"
                 currency="USD"
@@ -305,15 +301,14 @@ export default function Rhinoceros() {
                   Mac
                 </p>
               </PriceCard>
-            </CardsContainer>
+            </div>
           </div>
           {/* Precios de Flamingo */}
           <div className="my-20">
             <h3 className="text-center">Licencia de Flamingo nXt 5</h3>
-            <CardsContainer>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 lg:gap-6 xl:gap-12">
               {/* Licencia educacional */}
               <PriceCard
-                className="w-1/3"
                 title="Educacional"
                 price="195"
                 currency="USD"
@@ -351,8 +346,7 @@ export default function Rhinoceros() {
               </PriceCard>
               {/* Licencia comercial */}
               <PriceCard
-                className="w-1/3"
-                title="Comcercial"
+                title="Comercial"
                 price="495"
                 currency="USD"
                 color="bg-my-purple-3"
@@ -389,7 +383,6 @@ export default function Rhinoceros() {
               </PriceCard>
               {/* Licencia de laboratorio */}
               <PriceCard
-                className="w-1/3"
                 title="Laboratorio"
                 price="675"
                 currency="USD"
@@ -425,7 +418,7 @@ export default function Rhinoceros() {
                   <Icon className="w-8 flex-none" icon="x" /> Mac
                 </p>
               </PriceCard>
-            </CardsContainer>
+            </div>
           </div>
         </div>
       </section>

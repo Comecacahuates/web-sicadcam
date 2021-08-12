@@ -5,7 +5,6 @@ import Layout from "../components/layout";
 import SideImage from "../components/sideimage";
 import Card from "../components/card";
 import PriceCard from "../components/pricecard";
-import CardsContainer from "../components/cardscontainer";
 import Icon from "../components/icon";
 
 /** Especificaciones */
@@ -180,10 +179,9 @@ export default function IngenieriaInversa() {
           <h2 className="text-center">Precios</h2>
           <div className="my-20">
             <h3 className="text-center">Licencia de Mesh2Surface</h3>
-            <CardsContainer>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 lg:gap-6 xl:gap-12">
               {/* Licencia educacional */}
               <PriceCard
-                className="w-1/3"
                 title="Educacional"
                 price="345"
                 currency="EUR"
@@ -235,7 +233,6 @@ export default function IngenieriaInversa() {
               </PriceCard>
               {/* Licencia estándar */}
               <PriceCard
-                className="w-1/3"
                 title="Estándar"
                 price="795"
                 currency="EUR"
@@ -278,7 +275,6 @@ export default function IngenieriaInversa() {
               </PriceCard>
               {/* Licencia premium */}
               <PriceCard
-                className="w-1/3"
                 title="Premium"
                 price="1245"
                 currency="EUR"
@@ -328,7 +324,7 @@ export default function IngenieriaInversa() {
                   </p>
                 ))}
               </PriceCard>
-            </CardsContainer>
+            </div>
           </div>
         </div>
       </section>
@@ -411,11 +407,9 @@ export default function IngenieriaInversa() {
                 {Object.keys(specs).map((spec: string, index: number) => (
                   <React.Fragment key={index}>
                     <tr>
-                      <td className="py-3 px-3 font-bold">{spec}</td>
+                      <td className="font-bold">{spec}</td>
                       {specs[spec].map((value: string, index: number) => (
-                        <td key={index} className="py-3 px-3">
-                          {value}
-                        </td>
+                        <td key={index}>{value}</td>
                       ))}
                     </tr>
                   </React.Fragment>
