@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/layout";
 import SideImage from "../components/sideimage";
-import Card from "../components/card";
-import PriceCard from "../components/pricecard";
 import Icon from "../components/icon";
 
 /** Especificaciones */
@@ -181,149 +179,164 @@ export default function IngenieriaInversa() {
             <h3 className="text-center">Licencia de Mesh2Surface</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 lg:gap-6 xl:gap-12">
               {/* Licencia educacional */}
-              <PriceCard
-                title="Educacional"
-                price="345"
-                currency="EUR"
-                color="bg-my-purple-3"
-              >
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="book-fill" /> Para
-                  estudiantes y profesores
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="grid-1x2-fill" />{" "}
-                  Compatible con Rhino 5, 6 y 7
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="person-fill" /> 1
-                  usuario
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="check" /> Windows
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="x" /> Mac
-                </p>
-                <hr />
-                {[
-                  "Alineación al sistema de coordenadas universal",
-                  "Extracción de primitivas, parches, extusiones y superficies de revolución",
-                  "Definición de planos de simetría",
-                  "Dibujo interactivo 2D y 3D",
-                  "Superficies de red de curvas, barrido, transición y mezcla",
-                  "Control de tolerancia en tiempo real",
-                  "Ajuste de parches con tolerancia",
-                  "Segmentación de mallas",
-                  "Medición de radios de redondeo",
-                  "Análisis de desviación",
-                  "Impoertación de puntos PTX",
-                  "Modelado orgánico",
-                  "Modelado basado en simetría",
-                  "Tecnología de ajuste a mallas",
-                  "Tolerancia en tiempo real para modelado de formas libres",
-                  "Manipuladores para modelado",
-                  "Análisis de calidad de superficies",
-                  "Superficies automárticas",
-                ].map((feature: string, index: number) => (
-                  <p key={index} className="flex">
-                    <Icon className="w-8 flex-none" icon="check" /> {feature}
+              <div className="card">
+                <div className="card-title">
+                  <h4 className="m-0">Educacional</h4>
+                </div>
+                <div className="card-body">
+                  <p className="my-6 text-center font-display font-bold text-5xl">
+                    <span className="text-xl">$</span>345
+                    <span className="text-xl">EUR</span>
                   </p>
-                ))}
-              </PriceCard>
+                  <hr />
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="book-fill" /> Para
+                    estudiantes y profesores
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="grid-1x2-fill" />{" "}
+                    Compatible con Rhino 5, 6 y 7
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="person-fill" /> 1
+                    usuario
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="check" /> Windows
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="x" /> Mac
+                  </p>
+                  <hr />
+                  {[
+                    "Alineación al sistema de coordenadas universal",
+                    "Extracción de primitivas, parches, extusiones y superficies de revolución",
+                    "Definición de planos de simetría",
+                    "Dibujo interactivo 2D y 3D",
+                    "Superficies de red de curvas, barrido, transición y mezcla",
+                    "Control de tolerancia en tiempo real",
+                    "Ajuste de parches con tolerancia",
+                    "Segmentación de mallas",
+                    "Medición de radios de redondeo",
+                    "Análisis de desviación",
+                    "Impoertación de puntos PTX",
+                    "Modelado orgánico",
+                    "Modelado basado en simetría",
+                    "Tecnología de ajuste a mallas",
+                    "Tolerancia en tiempo real para modelado de formas libres",
+                    "Manipuladores para modelado",
+                    "Análisis de calidad de superficies",
+                    "Superficies automárticas",
+                  ].map((feature: string, index: number) => (
+                    <p key={index} className="flex">
+                      <Icon className="w-8 flex-none" icon="check" /> {feature}
+                    </p>
+                  ))}
+                </div>
+              </div>
               {/* Licencia estándar */}
-              <PriceCard
-                title="Estándar"
-                price="795"
-                currency="EUR"
-                color="bg-my-purple-3"
-              >
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="unlock-fill" /> Para
-                  cualquier uso
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="grid-1x2-fill" />{" "}
-                  Compatible con Rhino 5, 6 y 7
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="person-fill" /> 1
-                  usuario
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="check" /> Windows
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="x" /> Mac
-                </p>
-                <hr />
-                {[
-                  "Alineación al sistema de coordenadas universal",
-                  "Extracción de primitivas, parches, extusiones y superficies de revolución",
-                  "Definición de planos de simetría",
-                  "Dibujo interactivo 2D y 3D",
-                  "Superficies de red de curvas, barrido, transición y mezcla",
-                  "Control de tolerancia en tiempo real",
-                  "Ajuste de parches con tolerancia",
-                  "Segmentación de mallas",
-                  "Medición de radios de redondeo",
-                ].map((feature: string, index: number) => (
-                  <p key={index} className="flex">
-                    <Icon className="w-8 flex-none" icon="check" /> {feature}
+              <div className="card">
+                <div className="card-title">
+                  <h4 className="m-0">Estándar</h4>
+                </div>
+                <div className="card-body">
+                  <p className="my-6 text-center font-display font-bold text-5xl">
+                    <span className="text-xl">$</span>795
+                    <span className="text-xl">EUR</span>
                   </p>
-                ))}
-              </PriceCard>
+                  <hr />
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="unlock-fill" /> Para
+                    cualquier uso
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="grid-1x2-fill" />{" "}
+                    Compatible con Rhino 5, 6 y 7
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="person-fill" /> 1
+                    usuario
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="check" /> Windows
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="x" /> Mac
+                  </p>
+                  <hr />
+                  {[
+                    "Alineación al sistema de coordenadas universal",
+                    "Extracción de primitivas, parches, extusiones y superficies de revolución",
+                    "Definición de planos de simetría",
+                    "Dibujo interactivo 2D y 3D",
+                    "Superficies de red de curvas, barrido, transición y mezcla",
+                    "Control de tolerancia en tiempo real",
+                    "Ajuste de parches con tolerancia",
+                    "Segmentación de mallas",
+                    "Medición de radios de redondeo",
+                  ].map((feature: string, index: number) => (
+                    <p key={index} className="flex">
+                      <Icon className="w-8 flex-none" icon="check" /> {feature}
+                    </p>
+                  ))}
+                </div>
+              </div>
               {/* Licencia premium */}
-              <PriceCard
-                title="Premium"
-                price="1245"
-                currency="EUR"
-                color="bg-my-purple-3"
-              >
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="unlock-fill" /> Para
-                  cualquier uso
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="grid-1x2-fill" />{" "}
-                  Compatible con Rhino 5, 6 y 7
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="person-fill" /> 1
-                  usuario
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="check" /> Windows
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="x" /> Mac
-                </p>
-                <hr />
-                {[
-                  "Alineación al sistema de coordenadas universal",
-                  "Extracción de primitivas, parches, extusiones y superficies de revolución",
-                  "Definición de planos de simetría",
-                  "Dibujo interactivo 2D y 3D",
-                  "Superficies de red de curvas, barrido, transición y mezcla",
-                  "Control de tolerancia en tiempo real",
-                  "Ajuste de parches con tolerancia",
-                  "Segmentación de mallas",
-                  "Medición de radios de redondeo",
-                  "Análisis de desviación",
-                  "Impoertación de puntos PTX",
-                  "Modelado orgánico",
-                  "Modelado basado en simetría",
-                  "Tecnología de ajuste a mallas",
-                  "Tolerancia en tiempo real para modelado de formas libres",
-                  "Manipuladores para modelado",
-                  "Análisis de calidad de superficies",
-                  "Superficies automárticas",
-                ].map((feature: string, index: number) => (
-                  <p key={index} className="flex">
-                    <Icon className="w-8 flex-none" icon="check" /> {feature}
+              <div className="card">
+                <div className="card-title">
+                  <h4 className="m-0">Premium</h4>
+                </div>
+                <div className="card-body">
+                  <p className="my-6 text-center font-display font-bold text-5xl">
+                    <span className="text-xl">$</span>1,245
+                    <span className="text-xl">EUR</span>
                   </p>
-                ))}
-              </PriceCard>
+                  <hr />
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="unlock-fill" /> Para
+                    cualquier uso
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="grid-1x2-fill" />{" "}
+                    Compatible con Rhino 5, 6 y 7
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="person-fill" /> 1
+                    usuario
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="check" /> Windows
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="x" /> Mac
+                  </p>
+                  <hr />
+                  {[
+                    "Alineación al sistema de coordenadas universal",
+                    "Extracción de primitivas, parches, extusiones y superficies de revolución",
+                    "Definición de planos de simetría",
+                    "Dibujo interactivo 2D y 3D",
+                    "Superficies de red de curvas, barrido, transición y mezcla",
+                    "Control de tolerancia en tiempo real",
+                    "Ajuste de parches con tolerancia",
+                    "Segmentación de mallas",
+                    "Medición de radios de redondeo",
+                    "Análisis de desviación",
+                    "Impoertación de puntos PTX",
+                    "Modelado orgánico",
+                    "Modelado basado en simetría",
+                    "Tecnología de ajuste a mallas",
+                    "Tolerancia en tiempo real para modelado de formas libres",
+                    "Manipuladores para modelado",
+                    "Análisis de calidad de superficies",
+                    "Superficies automárticas",
+                  ].map((feature: string, index: number) => (
+                    <p key={index} className="flex">
+                      <Icon className="w-8 flex-none" icon="check" /> {feature}
+                    </p>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>

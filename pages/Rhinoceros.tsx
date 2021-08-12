@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/layout";
 import SideImage from "../components/sideimage";
-import PriceCard from "../components/pricecard";
 import Icon from "../components/icon";
 
 export default function Rhinoceros() {
@@ -207,100 +206,115 @@ export default function Rhinoceros() {
             <h3 className="text-center">Licencia de Rhinoceros 7</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 lg:gap-6 xl:gap-12">
               {/* Licencia educacional */}
-              <PriceCard
-                title="Educacional"
-                price="595"
-                currency="USD"
-                color="bg-my-purple-3"
-              >
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="book-fill" /> Para
-                  estudiantes y profesores
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
-                  <span>
-                    Actualización:{" "}
-                    <b>
-                      $95 <span className="text-xs">USD</span>
-                    </b>
-                  </span>
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="person-fill" /> 1
-                  usuario
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="check" /> Windows
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="check" /> Mac
-                </p>
-              </PriceCard>
+              <div className="card">
+                <div className="card-title">
+                  <h4 className="m-0">Educacional</h4>
+                </div>
+                <div className="card-body">
+                  <p className="my-6 text-center font-display font-bold text-5xl">
+                    <span className="text-xl">$</span>595
+                    <span className="text-xl">USD</span>
+                  </p>
+                  <hr />
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="book-fill" /> Para
+                    estudiantes y profesores
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                    <span>
+                      Actualización:{" "}
+                      <b>
+                        $95 <span className="text-xs">USD</span>
+                      </b>
+                    </span>
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="person-fill" /> 1
+                    usuario
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="check" /> Windows
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="check" /> Mac
+                  </p>
+                </div>
+              </div>
               {/* Licencia comercial */}
-              <PriceCard
-                title="Comercial"
-                price="995"
-                currency="USD"
-                color="bg-my-purple-3"
-              >
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="unlock-fill" /> Para
-                  cualquier uso
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
-                  <span>
-                    Actualización:{" "}
-                    <b>
-                      $595 <span className="text-xs">USD</span>
-                    </b>
-                  </span>
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="person-fill" /> 1
-                  usuario
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="check" /> Windows
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="check" /> Mac
-                </p>
-              </PriceCard>
+              <div className="card">
+                <div className="card-title">
+                  <h4 className="m-0">Comercial</h4>
+                </div>
+                <div className="card-body">
+                  <p className="my-6 text-center font-display font-bold text-5xl">
+                    <span className="text-xl">$</span>995
+                    <span className="text-xl">USD</span>
+                  </p>
+                  <hr />
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="unlock-fill" /> Para
+                    cualquier uso
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                    <span>
+                      Actualización:{" "}
+                      <b>
+                        $595 <span className="text-xs">USD</span>
+                      </b>
+                    </span>
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="person-fill" /> 1
+                    usuario
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="check" /> Windows
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="check" /> Mac
+                  </p>
+                </div>
+              </div>
               {/* Licencia de laboratorio */}
-              <PriceCard
-                title="Laboratorio"
-                price="975"
-                currency="USD"
-                color="bg-my-purple-3"
-              >
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="award-fill" /> Para
-                  escuelas y universidades
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="arrow-up" />
-                  <span>
-                    Actualización:{" "}
-                    <b>
-                      $295 <span className="text-xs">USD</span>
-                    </b>
-                  </span>
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="people-fill" />{" "}
-                  <span className="flex-1">30 usuarios</span>
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="check" />
-                  Windows
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="check" />
-                  Mac
-                </p>
-              </PriceCard>
+              <div className="card">
+                <div className="card-title">
+                  <h4 className="m-0">Laboratorio</h4>
+                </div>
+                <div className="card-body">
+                  <p className="my-6 text-center font-display font-bold text-5xl">
+                    <span className="text-xl">$</span>975
+                    <span className="text-xl">USD</span>
+                  </p>
+                  <hr />
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="award-fill" /> Para
+                    escuelas y universidades
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="arrow-up" />
+                    <span>
+                      Actualización:{" "}
+                      <b>
+                        $295 <span className="text-xs">USD</span>
+                      </b>
+                    </span>
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="people-fill" />{" "}
+                    <span className="flex-1">30 usuarios</span>
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="check" />
+                    Windows
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="check" />
+                    Mac
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           {/* Precios de Flamingo */}
@@ -308,116 +322,131 @@ export default function Rhinoceros() {
             <h3 className="text-center">Licencia de Flamingo nXt 5</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-3 lg:gap-6 xl:gap-12">
               {/* Licencia educacional */}
-              <PriceCard
-                title="Educacional"
-                price="195"
-                currency="USD"
-                color="bg-my-purple-3"
-              >
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="book-fill" /> Para
-                  estudiantes y profesores
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
-                  <span>
-                    Actualización desde Flamingo 1 y 2:{" "}
-                    <b>
-                      $95 <span className="text-xs">USD</span>
-                    </b>
-                  </span>
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="arrow-up" />
-                  <span>
-                    Actualización desde Flamingo nXt: <b>Gratis</b>
-                  </span>
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="person-fill" /> 1
-                  usuario
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="check" /> Windows
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="x" /> Mac
-                </p>
-              </PriceCard>
+              <div className="card">
+                <div className="card-title">
+                  <h4 className="m-0">Educacional</h4>
+                </div>
+                <div className="card-body">
+                  <p className="my-6 text-center font-display font-bold text-5xl">
+                    <span className="text-xl">$</span>195
+                    <span className="text-xl">USD</span>
+                  </p>
+                  <hr />
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="book-fill" /> Para
+                    estudiantes y profesores
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                    <span>
+                      Actualización desde Flamingo 1 y 2:{" "}
+                      <b>
+                        $95 <span className="text-xs">USD</span>
+                      </b>
+                    </span>
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="arrow-up" />
+                    <span>
+                      Actualización desde Flamingo nXt: <b>Gratis</b>
+                    </span>
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="person-fill" /> 1
+                    usuario
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="check" /> Windows
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="x" /> Mac
+                  </p>
+                </div>
+              </div>
               {/* Licencia comercial */}
-              <PriceCard
-                title="Comercial"
-                price="495"
-                currency="USD"
-                color="bg-my-purple-3"
-              >
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="unlock-fill" /> Para
-                  cualquier uso
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
-                  <span>
-                    Actualización desde Flamingo 1 y 2:{" "}
-                    <b>
-                      $295 <span className="text-xs">USD</span>
-                    </b>
-                  </span>
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
-                  <span>
-                    Actualización desde Flamingo nXt: <b>Gratis</b>
-                  </span>
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="person-fill" /> 1
-                  usuario
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="check" /> Windows
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="x" /> Mac
-                </p>
-              </PriceCard>
+              <div className="card">
+                <div className="card-title">
+                  <h4 className="m-0">Comercial</h4>
+                </div>
+                <div className="card-body">
+                  <p className="my-6 text-center font-display font-bold text-5xl">
+                    <span className="text-xl">$</span>495
+                    <span className="text-xl">USD</span>
+                  </p>
+                  <hr />
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="unlock-fill" /> Para
+                    cualquier uso
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                    <span>
+                      Actualización desde Flamingo 1 y 2:{" "}
+                      <b>
+                        $295 <span className="text-xs">USD</span>
+                      </b>
+                    </span>
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                    <span>
+                      Actualización desde Flamingo nXt: <b>Gratis</b>
+                    </span>
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="person-fill" /> 1
+                    usuario
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="check" /> Windows
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="x" /> Mac
+                  </p>
+                </div>
+              </div>
               {/* Licencia de laboratorio */}
-              <PriceCard
-                title="Laboratorio"
-                price="675"
-                currency="USD"
-                color="bg-my-purple-3"
-              >
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="award-fill" /> Para
-                  escuelas y universidades
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
-                  <span>
-                    Actualización desde Flamingo 1 y 2:{" "}
-                    <b>
-                      $195 <span className="text-xs">USD</span>
-                    </b>{" "}
-                  </span>
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
-                  <span>
-                    Actualización desde Flamingo nXt: <b>Gratis</b>
-                  </span>
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="people-fill" /> 30
-                  usuarioas
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="check" /> Windows
-                </p>
-                <p className="flex">
-                  <Icon className="w-8 flex-none" icon="x" /> Mac
-                </p>
-              </PriceCard>
+              <div className="card">
+                <div className="card-title">
+                  <h4 className="m-0">Laboratorio</h4>
+                </div>
+                <div className="card-body">
+                  <p className="my-6 text-center font-display font-bold text-5xl">
+                    <span className="text-xl">$</span>675
+                    <span className="text-xl">USD</span>
+                  </p>
+                  <hr />
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="award-fill" /> Para
+                    escuelas y universidades
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                    <span>
+                      Actualización desde Flamingo 1 y 2:{" "}
+                      <b>
+                        $195 <span className="text-xs">USD</span>
+                      </b>{" "}
+                    </span>
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="arrow-up" />{" "}
+                    <span>
+                      Actualización desde Flamingo nXt: <b>Gratis</b>
+                    </span>
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="people-fill" /> 30
+                    usuarioas
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="check" /> Windows
+                  </p>
+                  <p className="flex">
+                    <Icon className="w-8 flex-none" icon="x" /> Mac
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
